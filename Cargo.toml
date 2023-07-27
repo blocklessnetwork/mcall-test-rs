@@ -1,0 +1,13 @@
+[package]
+name = "mcall-test"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "module_a"
+
+[[bin]]
+name = "module_b"
+
+[[bin]]
+name = "module_c"
