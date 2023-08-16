@@ -37,9 +37,10 @@ pub unsafe fn dealloc(ptr: i32, size: u32) {
     std::alloc::dealloc(ptr as *mut u8, layout);
 }
 
+
 #[no_mangle]
 pub fn _initialize() {
-    let method = "{\"module\":\"module_b\", \"methods\":[\"method_b\"]}";
+    let method = r#"{"methods":["method_b"]}"#;
     let m_ptr = method.as_ptr();
     let mut rs = [0u8; 256];
     unsafe {
